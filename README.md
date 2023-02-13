@@ -9,7 +9,7 @@ const KingDasWinx = {
     country: 'Brazil',
     knowledge: ['anything'],
     hobbies: ['hehe', 'Study', '', 'Mangas', 'Anime'],
-    whatami: ['New in PC Programming', 'Afonso Padilha']
+    whatami: ['New in PC Programming', 'Aii motta']
 };
 ```
 
