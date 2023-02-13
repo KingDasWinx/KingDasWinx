@@ -4,7 +4,7 @@
 </p>
 
 ```javascript
-const Nirayuki = {
+const KingDasWinx = {
     age: 16,
     country: 'Brazil',
     knowledge: ['anything'],
