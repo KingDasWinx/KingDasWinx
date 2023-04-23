@@ -5,7 +5,7 @@
 
 ```javascript
 const KingDasWinx = {
-    age: 16,
+    age: 17,
     country: 'Brazil',
     knowledge: ['anything'],
     hobbies: ['hehe', 'Study', '', 'Mangas', 'Anime'],
