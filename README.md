@@ -8,8 +8,9 @@ const KingDasWinx = {
     age: 17,
     country: 'Brazil',
     knowledge: ['anything'],
-    hobbies: ['hehe', 'Study', '', 'Mangas', 'Anime'],
-    whatami: ['New in PC Programming', 'Aii motta']
+    hobbies: ['hehe', 'study', 'sleep', 'mangas', 'anime'],
+    whatami: ['New in PC Programming', 'Shinzo wo Sasageyo'],
+    inspiration: ['Nirayuki']
 };
 ```
 
