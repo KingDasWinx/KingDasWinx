@@ -5,13 +5,15 @@
 
 ```javascript
 const KingDasWinx = {
-    age: 17,
+    name: 'João Moreira',
+    age: 18,
     country: 'Brazil',
-    knowledge: ['anything'],
-    hobbies: ['hehe', 'study', 'sleep', 'mangas', 'anime'],
-    whatami: ['New in PC Programming', 'Shinzo wo Sasageyo'],
-    inspiration: ['Nirayuki']
+    knowledge: ['Systems Development', 'Linux', 'Arduino', 'Pico-8', 'VS Code', 'Hyprland', 'Arch Linux'],
+    hobbies: ['programming', 'gaming', 'reading manga', 'watching anime', 'learning about technology'],
+    whatami: ['Systems Development Student', 'Technology Enthusiast'],
+    inspiration: ['Learn quickly', 'Solve complex problems', 'Explore new technologies']
 };
+
 ```
 
 
