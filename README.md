@@ -6,8 +6,8 @@
 ```javascript
 const KingDasWinx = {
     name: 'João Moreira',
-    age: 18,
-    country: 'Brazil',
+    age: 19,
+    country: 'Brasil',
     knowledge: ['Systems Development', 'Linux', 'Arduino', 'Pico-8', 'VS Code', 'Hyprland', 'Arch Linux'],
     hobbies: ['programming', 'gaming', 'reading manga', 'watching anime', 'learning about technology'],
     whatami: ['Systems Development Student', 'Technology Enthusiast'],
