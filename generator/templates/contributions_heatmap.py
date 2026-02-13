@@ -75,7 +75,7 @@ def _build_contribution_stats(total_contributions, streak, theme):
     stats.append(f'''  <g class="stat-group">
     <text x="60" y="240" fill="{theme['text_faint']}" font-size="10" 
       font-family="monospace" letter-spacing="1" text-anchor="start">TOTAL CONTRIBUTIONS</text>
-    <text x="60" y="265" fill="{theme['synapse_cyan']}" font-size="32" 
+    <text x="60" y="275" fill="{theme['synapse_cyan']}" font-size="32" 
       font-weight="bold" font-family="sans-serif" text-anchor="start" opacity="0">
       {total_contributions}
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.5s" fill="freeze"/>
@@ -89,12 +89,12 @@ def _build_contribution_stats(total_contributions, streak, theme):
     stats.append(f'''  <g class="stat-group">
     <text x="300" y="240" fill="{theme['text_faint']}" font-size="10" 
       font-family="monospace" letter-spacing="1" text-anchor="start">CURRENT STREAK</text>
-    <text x="300" y="265" fill="{theme['dendrite_violet']}" font-size="32" 
+    <text x="300" y="275" fill="{theme['dendrite_violet']}" font-size="32" 
       font-weight="bold" font-family="sans-serif" text-anchor="start" opacity="0">
       {streak}
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.7s" fill="freeze"/>
     </text>
-    <text x="{days_x}" y="265" fill="{theme['text_dim']}" font-size="16" 
+    <text x="{days_x}" y="275" fill="{theme['text_dim']}" font-size="16" 
       font-family="sans-serif" text-anchor="start" dominant-baseline="alphabetic" opacity="0">
       days
       <animate attributeName="opacity" from="0" to="0.6" dur="0.6s" begin="0.7s" fill="freeze"/>
@@ -233,8 +233,8 @@ def render(contributions_data: dict, theme: dict) -> str:
 {_build_neural_connections(theme)}
 
   <!-- Title -->
-  <text x="30" y="38" fill="{theme['text_faint']}" font-size="11" 
-    font-family="monospace" letter-spacing="3">NEURAL ACTIVITY PATTERN</text>
+  <text x="30" y="40" fill="{theme['text_faint']}" font-size="11" 
+    font-family="monospace" letter-spacing="3">NEURAL ACTIVITY</text>
   
   <!-- Status indicator -->
   <circle cx="235" cy="34" r="3" fill="{theme['axon_amber']}">
