@@ -5,13 +5,14 @@ from generator.utils import deterministic_random
 WIDTH, HEIGHT = 850, 280
 
 
-def _build_week_bars(weeks_data, max_contributions, theme):
-    """Build animated contribution bars for each week."""
+def _build_day_bars(days_data, max_contributions, theme):
+    """Build animated contribution bars for each day."""
     bars = []
-    bar_width = 8
+    bar_width = 2
     max_height = 120
     start_x = 60
-    spacing = 12
+    available_width = WIDTH - (start_x * 2)  # 730px
+    spacing = available_width / max(len(days_data), 1)
     base_y = 200
     
     colors = [
@@ -20,7 +21,22 @@ def _build_week_bars(weeks_data, max_contributions, theme):
         theme['axon_amber']
     ]
     
-    for i, count in enumerate(weeks_data):
+    # Create shared filter defs at the start
+    filters = []
+    for idx, color in enumerate(colors):
+        filters.append(f'''    <filter id="bar-glow-{idx}" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="{color}" flood-opacity="0.5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>''')
+    
+    bars.extend(filters)
+    
+    for i, count in enumerate(days_data):
         if count == 0:
             continue
             
@@ -28,46 +44,25 @@ def _build_week_bars(weeks_data, max_contributions, theme):
         
         # Normalize height based on max contributions
         height = (count / max_contributions) * max_height if max_contributions > 0 else 10
-        height = max(height, 4)  # Minimum height
+        height = max(height, 3)  # Minimum height
         
-        # Cycle through colors
-        color = colors[i % len(colors)]
+        # Cycle through colors (change every ~30 days for monthly variance)
+        color_idx = (i // 30) % len(colors)
+        color = colors[color_idx]
         
-        # Animation delay based on position
-        delay = f"{i * 0.02}s"
-        
-        # Glow filter
-        bars.append(f'''    <defs>
-      <filter id="bar-glow-{i}" x="-100%" y="-100%" width="300%" height="300%">
-        <feGaussianBlur stdDeviation="2" result="blur"/>
-        <feFlood flood-color="{color}" flood-opacity="0.6"/>
-        <feComposite in2="blur" operator="in"/>
-        <feMerge>
-          <feMergeNode/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>''')
+        # Animation delay based on position (faster for many elements)
+        delay = f"{i * 0.005}s"
         
         # Bar with glow
-        bars.append(f'''    <rect x="{x}" y="{base_y}" width="{bar_width}" height="0" 
-          fill="{color}" opacity="0.8" rx="2" filter="url(#bar-glow-{i})">
-      <animate attributeName="height" from="0" to="{height}" 
-        dur="0.8s" begin="{delay}" fill="freeze"/>
-      <animate attributeName="y" from="{base_y}" to="{base_y - height}" 
-        dur="0.8s" begin="{delay}" fill="freeze"/>
+        bars.append(f'''    <rect x="{x:.1f}" y="{base_y}" width="{bar_width}" height="0" 
+          fill="{color}" opacity="0.8" rx="1" filter="url(#bar-glow-{color_idx})">
+      <animate attributeName="height" from="0" to="{height:.1f}" 
+        dur="0.6s" begin="{delay}" fill="freeze"/>
+      <animate attributeName="y" from="{base_y}" to="{base_y - height:.1f}" 
+        dur="0.6s" begin="{delay}" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="{delay}" repeatCount="indefinite"/>
     </rect>''')
-        
-        # Pulsing top dot
-        bars.append(f'''    <circle cx="{x + bar_width/2}" cy="{base_y}" r="2" 
-          fill="{color}" opacity="0">
-      <animate attributeName="cy" from="{base_y}" to="{base_y - height}" 
-        dur="0.8s" begin="{delay}" fill="freeze"/>
-      <animate attributeName="opacity" values="0;1;0.7;1;0.7" 
-        dur="2s" begin="{float(delay[:-1]) + 0.8}s" repeatCount="indefinite"/>
-    </circle>''')
     
     return "\n".join(bars)
 
@@ -79,25 +74,28 @@ def _build_contribution_stats(total_contributions, streak, theme):
     # Total contributions display
     stats.append(f'''  <g class="stat-group">
     <text x="60" y="240" fill="{theme['text_faint']}" font-size="10" 
-      font-family="monospace" letter-spacing="1">TOTAL CONTRIBUTIONS</text>
+      font-family="monospace" letter-spacing="1" text-anchor="start">TOTAL CONTRIBUTIONS</text>
     <text x="60" y="265" fill="{theme['synapse_cyan']}" font-size="32" 
-      font-weight="bold" font-family="sans-serif" opacity="0">
+      font-weight="bold" font-family="sans-serif" text-anchor="start" opacity="0">
       {total_contributions}
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.5s" fill="freeze"/>
     </text>
   </g>''')
     
     # Current streak display
+    streak_text_width = len(str(streak)) * 20
+    days_x = 300 + streak_text_width
+    
     stats.append(f'''  <g class="stat-group">
-    <text x="280" y="240" fill="{theme['text_faint']}" font-size="10" 
-      font-family="monospace" letter-spacing="1">CURRENT STREAK</text>
-    <text x="280" y="265" fill="{theme['dendrite_violet']}" font-size="32" 
-      font-weight="bold" font-family="sans-serif" opacity="0">
+    <text x="300" y="240" fill="{theme['text_faint']}" font-size="10" 
+      font-family="monospace" letter-spacing="1" text-anchor="start">CURRENT STREAK</text>
+    <text x="300" y="265" fill="{theme['dendrite_violet']}" font-size="32" 
+      font-weight="bold" font-family="sans-serif" text-anchor="start" opacity="0">
       {streak}
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.7s" fill="freeze"/>
     </text>
-    <text x="330" y="265" fill="{theme['text_dim']}" font-size="16" 
-      font-family="sans-serif" opacity="0">
+    <text x="{days_x}" y="265" fill="{theme['text_dim']}" font-size="16" 
+      font-family="sans-serif" text-anchor="start" dominant-baseline="alphabetic" opacity="0">
       days
       <animate attributeName="opacity" from="0" to="0.6" dur="0.6s" begin="0.7s" fill="freeze"/>
     </text>
@@ -193,21 +191,20 @@ def render(contributions_data: dict, theme: dict) -> str:
     
     Args:
         contributions_data: dict with keys:
-            - weeks: list of contribution counts per week (last 52 weeks)
-            - total: total contributions in the period
+            - days: list of contribution counts per day (current year)
+            - total: total contributions in current year
             - streak: current contribution streak in days
         theme: color palette dict
     """
-    weeks = contributions_data.get('weeks', [])
+    days = contributions_data.get('days', [])
     total = contributions_data.get('total', 0)
     streak = contributions_data.get('streak', 0)
     
-    # Limit to last 52 weeks and pad if needed
-    weeks = weeks[-52:] if len(weeks) > 52 else weeks
-    if len(weeks) < 52:
-        weeks = [0] * (52 - len(weeks)) + weeks
+    # Ensure we have data
+    if not days:
+        days = [0]
     
-    max_contributions = max(weeks) if weeks else 1
+    max_contributions = max(days) if days else 1
     
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
   <defs>
@@ -246,10 +243,10 @@ def render(contributions_data: dict, theme: dict) -> str:
 
   <!-- Time range label -->
   <text x="{WIDTH - 30}" y="38" fill="{theme['text_faint']}" font-size="10" 
-    font-family="monospace" text-anchor="end" opacity="0.5">LAST 52 WEEKS</text>
+    font-family="monospace" text-anchor="end" opacity="0.5">CURRENT YEAR</text>
 
   <!-- Contribution bars -->
-{_build_week_bars(weeks, max_contributions, theme)}
+{_build_day_bars(days, max_contributions, theme)}
 
   <!-- Stats display -->
 {_build_contribution_stats(total, streak, theme)}

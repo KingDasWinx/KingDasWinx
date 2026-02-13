@@ -225,13 +225,13 @@ class GitHubAPI:
         return languages
 
     def fetch_contributions(self) -> dict:
-        """Fetch contribution data for the last 52 weeks.
+        """Fetch contribution data for the current year (daily).
         
         Returns:
             dict with keys:
-                - weeks: list of contribution counts per week
-                - total: total contributions
-                - streak: current streak in days (estimated)
+                - days: list of contribution counts per day (current year)
+                - total: total contributions in current year
+                - streak: current streak in days
         """
         if self.token:
             return self._fetch_contributions_graphql()
@@ -239,6 +239,7 @@ class GitHubAPI:
 
     def _fetch_contributions_graphql(self) -> dict:
         """Fetch contribution data via GraphQL."""
+        from datetime import datetime
         query = """
         query($username: String!) {
           user(login: $username) {
@@ -272,13 +273,21 @@ class GitHubAPI:
             calendar = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
             weeks = calendar["weeks"]
             
-            # Aggregate contributions per week
-            weeks_data = []
+            # Flatten to all days
             all_days = []
             for week in weeks:
-                week_total = sum(day["contributionCount"] for day in week["contributionDays"])
-                weeks_data.append(week_total)
                 all_days.extend(week["contributionDays"])
+            
+            # Filter only current year
+            current_year = datetime.now().year
+            days_this_year = [
+                day["contributionCount"] 
+                for day in all_days 
+                if day["date"].startswith(str(current_year))
+            ]
+            
+            # Calculate total for current year
+            total_this_year = sum(days_this_year)
             
             # Calculate current streak
             streak = 0
@@ -289,8 +298,8 @@ class GitHubAPI:
                     break
             
             return {
-                "weeks": weeks_data,
-                "total": calendar["totalContributions"],
+                "days": days_this_year,
+                "total": total_this_year,
                 "streak": streak,
             }
         except (requests.exceptions.RequestException, KeyError) as e:
@@ -300,23 +309,27 @@ class GitHubAPI:
     def _fetch_contributions_fallback(self) -> dict:
         """Fallback: generate estimated contribution data."""
         import random
+        from datetime import datetime
         random.seed(hash(self.username))
         
-        # Generate 52 weeks of pseudo-random data
-        weeks = [random.randint(0, 50) for _ in range(52)]
-        total = sum(weeks)
+        # Generate days for current year (up to today)
+        current_year = datetime.now().year
+        day_of_year = datetime.now().timetuple().tm_yday
+        
+        days = [random.randint(0, 25) if random.random() > 0.3 else 0 for _ in range(day_of_year)]
+        total = sum(days)
         
         # Calculate a pseudo-streak
         streak = 0
-        for count in reversed(weeks[-4:]):  # Last 4 weeks
+        for count in reversed(days[-30:]):
             if count > 0:
-                streak += 7  # Assume full week if week has contributions
+                streak += 1
             else:
                 break
         
         logger.info("Using fallback contribution data (estimated)")
         return {
-            "weeks": weeks,
+            "days": days,
             "total": total,
             "streak": streak,
         }
