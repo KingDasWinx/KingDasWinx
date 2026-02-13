@@ -240,10 +240,14 @@ class GitHubAPI:
     def _fetch_contributions_graphql(self) -> dict:
         """Fetch contribution data via GraphQL."""
         from datetime import datetime
+        
+        # Get current year
+        current_year = datetime.now().year
+        
         query = """
-        query($username: String!) {
+        query($username: String!, $year: Int!) {
           user(login: $username) {
-            contributionsCollection {
+            contributionsCollection(year: $year) {
               contributionCalendar {
                 totalContributions
                 weeks {
@@ -261,7 +265,13 @@ class GitHubAPI:
             resp = self._request(
                 "POST",
                 self.GRAPHQL_URL,
-                json={"query": query, "variables": {"username": self.username}},
+                json={
+                    "query": query, 
+                    "variables": {
+                        "username": self.username,
+                        "year": current_year
+                    }
+                },
             )
             resp.raise_for_status()
             data = resp.json()
@@ -278,18 +288,13 @@ class GitHubAPI:
             for week in weeks:
                 all_days.extend(week["contributionDays"])
             
-            # Filter only current year
-            current_year = datetime.now().year
-            days_this_year = [
-                day["contributionCount"] 
-                for day in all_days 
-                if day["date"].startswith(str(current_year))
-            ]
+            # Get contribution counts per day
+            days_data = [day["contributionCount"] for day in all_days]
             
-            # Calculate total for current year
-            total_this_year = sum(days_this_year)
+            # Total contributions for the year
+            total_this_year = calendar["totalContributions"]
             
-            # Calculate current streak
+            # Calculate current streak (from most recent day backwards)
             streak = 0
             for day in reversed(all_days):
                 if day["contributionCount"] > 0:
@@ -297,8 +302,10 @@ class GitHubAPI:
                 else:
                     break
             
+            logger.info("Fetched %d days of contributions for year %d", len(days_data), current_year)
+            
             return {
-                "days": days_this_year,
+                "days": days_data,
                 "total": total_this_year,
                 "streak": streak,
             }
