@@ -2,7 +2,7 @@
 
 from generator.utils import deterministic_random
 
-WIDTH, HEIGHT = 850, 280
+WIDTH, HEIGHT = 850, 300
 
 
 def _build_day_bars(days_data, max_contributions, theme):
