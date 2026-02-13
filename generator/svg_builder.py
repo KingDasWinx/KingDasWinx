@@ -1,6 +1,6 @@
 """SVG Builder — orchestrator connecting config, stats, and templates."""
 
-from generator.templates import galaxy_header, stats_card, tech_stack, projects_constellation
+from generator.templates import galaxy_header, stats_card, tech_stack, projects_constellation, contributions_heatmap
 
 
 class SVGBuilder:
@@ -10,10 +10,11 @@ class SVGBuilder:
     which resolves theme defaults and applies missing optional fields.
     """
 
-    def __init__(self, config: dict, stats: dict, languages: dict):
+    def __init__(self, config: dict, stats: dict, languages: dict, contributions: dict = None):
         self.config = config
         self.stats = stats
         self.languages = languages
+        self.contributions = contributions or {"weeks": [], "total": 0, "streak": 0}
         self.theme = config["theme"]
         self.galaxy_arms = config.get("galaxy_arms", [])
         self.projects = config.get("projects", [])
@@ -48,5 +49,11 @@ class SVGBuilder:
         return projects_constellation.render(
             projects=self.projects,
             galaxy_arms=self.galaxy_arms,
+            theme=self.theme,
+        )
+
+    def render_contributions_heatmap(self) -> str:
+        return contributions_heatmap.render(
+            contributions_data=self.contributions,
             theme=self.theme,
         )

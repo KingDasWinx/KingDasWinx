@@ -25,6 +25,11 @@ DEMO_LANGUAGES = {
     "Dockerfile": 15000,
     "CSS": 10000,
 }
+DEMO_CONTRIBUTIONS = {
+    "weeks": [12, 18, 25, 30, 22, 28, 35, 40, 38, 42, 45, 48, 50, 52, 48, 45, 42, 40, 38, 35, 32, 30, 28, 25, 22, 20, 18, 15, 12, 10, 15, 20, 25, 30, 35, 40, 42, 45, 48, 50, 52, 50, 48, 45, 42, 40, 38, 35, 32, 30, 28, 25],
+    "total": 1847,
+    "streak": 47,
+}
 
 
 def generate(args):
@@ -64,9 +69,10 @@ def generate(args):
     logger.info("Generating profile SVGs for @%s...", username)
 
     if demo:
-        logger.info("Demo mode: using hardcoded stats and languages.")
+        logger.info("Demo mode: using hardcoded stats, languages, and contributions.")
         stats = DEMO_STATS
         languages = DEMO_LANGUAGES
+        contributions = DEMO_CONTRIBUTIONS
     else:
         # Fetch GitHub data
         api = GitHubAPI(username)
@@ -85,11 +91,19 @@ def generate(args):
             logger.warning("Could not fetch languages (%s). Using defaults.", e)
             languages = {}
 
+        logger.info("Fetching contributions...")
+        try:
+            contributions = api.fetch_contributions()
+        except (requests.exceptions.RequestException, ValueError, KeyError) as e:
+            logger.warning("Could not fetch contributions (%s). Using defaults.", e)
+            contributions = {"weeks": [], "total": 0, "streak": 0}
+
     logger.info("Stats: %s", stats)
     logger.info("Languages: %d found", len(languages))
+    logger.info("Contributions: %d total, %d day streak", contributions.get("total", 0), contributions.get("streak", 0))
 
     # Build SVGs
-    builder = SVGBuilder(config, stats, languages)
+    builder = SVGBuilder(config, stats, languages, contributions)
     output_dir = os.path.join(os.path.dirname(__file__), "..", "assets", "generated")
     os.makedirs(output_dir, exist_ok=True)
 
@@ -98,6 +112,7 @@ def generate(args):
         "stats-card.svg": builder.render_stats_card(),
         "tech-stack.svg": builder.render_tech_stack(),
         "projects-constellation.svg": builder.render_projects_constellation(),
+        "contributions-heatmap.svg": builder.render_contributions_heatmap(),
     }
 
     for filename, content in svgs.items():
@@ -106,7 +121,7 @@ def generate(args):
             f.write(content)
         logger.info("Wrote %s", path)
 
-    logger.info("Done! 4 SVGs generated.")
+    logger.info("Done! 5 SVGs generated.")
 
 
 def main():

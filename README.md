@@ -28,16 +28,9 @@
 
 <br/>
 
-<details>
-<summary><strong>More about me</strong></summary>
-
-<br/>
-
-Building tools that make developers' lives easier.
-Passionate about distributed systems, developer experience, and the open-source ecosystem.
-
-**Currently at** Stellar Labs — San Francisco, CA
-</details>
+<div align="center">
+  <img src="./assets/generated/contributions-heatmap.svg" width="850" alt="Neural Activity"/>
+</div>
 
 <br/>
 

@@ -251,14 +251,14 @@ def _build_project_card(i, proj, arm, color, card_width, card_x, theme):
 
     # Project name (centered)
     card_parts.append(
-        f'    <text x="{card_cx}" y="111" fill="{theme["text_bright"]}" '
+        f'    <text x="{card_cx}" y="120" fill="{theme["text_bright"]}" '
         f'font-size="14" font-weight="bold" font-family="sans-serif" '
         f'text-anchor="middle">{esc(repo_name)}</text>'
     )
 
     # Description lines (centered)
     for j, line in enumerate(desc_lines[:2]):
-        y_pos = 129 + j * 15
+        y_pos = 138 + j * 15
         card_parts.append(
             f'    <text x="{card_cx}" y="{y_pos}" fill="{theme["text_dim"]}" '
             f'font-size="11" font-family="sans-serif" '
@@ -270,11 +270,11 @@ def _build_project_card(i, proj, arm, color, card_width, card_x, theme):
     tag_width = len(tag_text) * 7 + 16
     tag_x = card_cx - tag_width / 2
     card_parts.append(
-        f'    <rect x="{tag_x}" y="163" width="{tag_width}" height="18" rx="9" ry="9" '
+        f'    <rect x="{tag_x}" y="172" width="{tag_width}" height="18" rx="9" ry="9" '
         f'fill="{color}" opacity="0.12"/>'
     )
     card_parts.append(
-        f'    <text x="{card_cx}" y="175" fill="{color}" '
+        f'    <text x="{card_cx}" y="184" fill="{color}" '
         f'font-size="9" font-family="monospace" text-anchor="middle" '
         f'opacity="0.85">{esc(tag_text)}</text>'
     )

@@ -149,11 +149,11 @@
     <circle cx="152.5" cy="85" r="8" fill="#a78bfa" opacity="0.15" filter="url(#proj-glow-0)"/>
     <circle cx="152.5" cy="85" r="5" fill="#a78bfa" opacity="0.7"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="r" values="4.5;5.5;4.5" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
     <circle cx="152.5" cy="85" r="2" fill="#ffffff" opacity="0.9"/>
-    <text x="152.5" y="111" fill="#f1f5f9" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Factorio-Mod-Manager</text>
-    <text x="152.5" y="129" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">A mod manager for Factorio,</text>
-    <text x="152.5" y="144" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">programmed using the Rust +</text>
-    <rect x="116.5" y="163" width="72" height="18" rx="9" ry="9" fill="#a78bfa" opacity="0.12"/>
-    <text x="152.5" y="175" fill="#a78bfa" font-size="9" font-family="monospace" text-anchor="middle" opacity="0.85">Frontend</text>
+    <text x="152.5" y="120" fill="#f1f5f9" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Factorio-Mod-Manager</text>
+    <text x="152.5" y="138" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">A mod manager for Factorio,</text>
+    <text x="152.5" y="153" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">programmed using the Rust +</text>
+    <rect x="116.5" y="172" width="72" height="18" rx="9" ry="9" fill="#a78bfa" opacity="0.12"/>
+    <text x="152.5" y="184" fill="#a78bfa" font-size="9" font-family="monospace" text-anchor="middle" opacity="0.85">Frontend</text>
   </g>
   <g opacity="0" style="animation: card-appear 0.6s ease 0.3s forwards">
     <rect x="305.0" y="55" width="240" height="140" rx="8" ry="8" fill="url(#card-bg-1)" stroke="#1a2332" stroke-width="1"/>
@@ -166,11 +166,11 @@
     <circle cx="425.0" cy="85" r="8" fill="#00d4ff" opacity="0.15" filter="url(#proj-glow-1)"/>
     <circle cx="425.0" cy="85" r="5" fill="#00d4ff" opacity="0.7"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" begin="0.3s" repeatCount="indefinite"/><animate attributeName="r" values="4.5;5.5;4.5" dur="3s" begin="0.3s" repeatCount="indefinite"/></circle>
     <circle cx="425.0" cy="85" r="2" fill="#ffffff" opacity="0.9"/>
-    <text x="425.0" y="111" fill="#f1f5f9" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">projeto-neia</text>
-    <text x="425.0" y="129" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">This is a Next.js project with</text>
-    <text x="425.0" y="144" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">TypeScript for a lunch box sales</text>
-    <rect x="392.5" y="163" width="65" height="18" rx="9" ry="9" fill="#00d4ff" opacity="0.12"/>
-    <text x="425.0" y="175" fill="#00d4ff" font-size="9" font-family="monospace" text-anchor="middle" opacity="0.85">Backend</text>
+    <text x="425.0" y="120" fill="#f1f5f9" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">projeto-neia</text>
+    <text x="425.0" y="138" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">This is a Next.js project with</text>
+    <text x="425.0" y="153" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">TypeScript for a lunch box sales</text>
+    <rect x="392.5" y="172" width="65" height="18" rx="9" ry="9" fill="#00d4ff" opacity="0.12"/>
+    <text x="425.0" y="184" fill="#00d4ff" font-size="9" font-family="monospace" text-anchor="middle" opacity="0.85">Backend</text>
   </g>
   <g opacity="0" style="animation: card-appear 0.6s ease 0.6s forwards">
     <rect x="577.5" y="55" width="240" height="140" rx="8" ry="8" fill="url(#card-bg-2)" stroke="#1a2332" stroke-width="1"/>
@@ -183,11 +183,11 @@
     <circle cx="697.5" cy="85" r="8" fill="#ffb020" opacity="0.15" filter="url(#proj-glow-2)"/>
     <circle cx="697.5" cy="85" r="5" fill="#ffb020" opacity="0.7"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="r" values="4.5;5.5;4.5" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
     <circle cx="697.5" cy="85" r="2" fill="#ffffff" opacity="0.9"/>
-    <text x="697.5" y="111" fill="#f1f5f9" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">roku-filmes-app</text>
-    <text x="697.5" y="129" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">An app for Roku devices that</text>
-    <text x="697.5" y="144" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">allows users to browse and watch</text>
-    <rect x="647.5" y="163" width="100" height="18" rx="9" ry="9" fill="#ffb020" opacity="0.12"/>
-    <text x="697.5" y="175" fill="#ffb020" font-size="9" font-family="monospace" text-anchor="middle" opacity="0.85">Tools &amp; More</text>
+    <text x="697.5" y="120" fill="#f1f5f9" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">roku-filmes-app</text>
+    <text x="697.5" y="138" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">An app for Roku devices that</text>
+    <text x="697.5" y="153" fill="#94a3b8" font-size="11" font-family="sans-serif" text-anchor="middle">allows users to browse and watch</text>
+    <rect x="647.5" y="172" width="100" height="18" rx="9" ry="9" fill="#ffb020" opacity="0.12"/>
+    <text x="697.5" y="184" fill="#ffb020" font-size="9" font-family="monospace" text-anchor="middle" opacity="0.85">Tools &amp; More</text>
   </g>
 
   <!-- Global scan line -->
