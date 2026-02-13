@@ -248,6 +248,11 @@ class GitHubAPI:
         query($username: String!, $year: Int!) {
           user(login: $username) {
             contributionsCollection(year: $year) {
+              totalCommitContributions
+              totalIssueContributions
+              totalPullRequestContributions
+              totalPullRequestReviewContributions
+              restrictedContributionsCount
               contributionCalendar {
                 totalContributions
                 weeks {
@@ -280,7 +285,8 @@ class GitHubAPI:
                 logger.warning("GraphQL errors fetching contributions: %s", data["errors"])
                 return self._fetch_contributions_fallback()
             
-            calendar = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+            collection = data["data"]["user"]["contributionsCollection"]
+            calendar = collection["contributionCalendar"]
             weeks = calendar["weeks"]
             
             # Flatten to all days
@@ -291,8 +297,14 @@ class GitHubAPI:
             # Get contribution counts per day
             days_data = [day["contributionCount"] for day in all_days]
             
-            # Total contributions for the year
-            total_this_year = calendar["totalContributions"]
+            # Total contributions (sum all types + restricted)
+            total_contributions = (
+                collection["totalCommitContributions"] +
+                collection["totalIssueContributions"] +
+                collection["totalPullRequestContributions"] +
+                collection["totalPullRequestReviewContributions"] +
+                collection["restrictedContributionsCount"]
+            )
             
             # Calculate current streak (from most recent day backwards)
             streak = 0
@@ -302,11 +314,21 @@ class GitHubAPI:
                 else:
                     break
             
-            logger.info("Fetched %d days of contributions for year %d", len(days_data), current_year)
+            logger.info(
+                "Fetched contributions for year %d: %d total (%d commits, %d issues, %d PRs, %d reviews, %d restricted), %d days of data", 
+                current_year, 
+                total_contributions,
+                collection["totalCommitContributions"],
+                collection["totalIssueContributions"],
+                collection["totalPullRequestContributions"],
+                collection["totalPullRequestReviewContributions"],
+                collection["restrictedContributionsCount"],
+                len(days_data)
+            )
             
             return {
                 "days": days_data,
-                "total": total_this_year,
+                "total": total_contributions,
                 "streak": streak,
             }
         except (requests.exceptions.RequestException, KeyError) as e:
