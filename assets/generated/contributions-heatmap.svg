@@ -286,113 +286,68 @@
     </filter>
     <rect x="60.0" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="43.2" 
+      <animate attributeName="height" from="0" to="4.8" 
         dur="0.6s" begin="0.0s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="156.8" 
+      <animate attributeName="y" from="200" to="195.2" 
         dur="0.6s" begin="0.0s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.0s" repeatCount="indefinite"/>
     </rect>
-    <rect x="73.5" y="200" width="2" height="0" 
+    <rect x="86.5" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="28.8" 
-        dur="0.6s" begin="0.005s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="171.2" 
-        dur="0.6s" begin="0.005s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.005s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="87.0" y="200" width="2" height="0" 
-          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="24.0" 
+      <animate attributeName="height" from="0" to="81.6" 
         dur="0.6s" begin="0.01s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="176.0" 
+      <animate attributeName="y" from="200" to="118.4" 
         dur="0.6s" begin="0.01s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.01s" repeatCount="indefinite"/>
     </rect>
-    <rect x="114.1" y="200" width="2" height="0" 
+    <rect x="99.8" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="24.0" 
-        dur="0.6s" begin="0.02s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="176.0" 
-        dur="0.6s" begin="0.02s" fill="freeze"/>
+      <animate attributeName="height" from="0" to="115.2" 
+        dur="0.6s" begin="0.015s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="84.8" 
+        dur="0.6s" begin="0.015s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.02s" repeatCount="indefinite"/>
+        dur="2s" begin="0.015s" repeatCount="indefinite"/>
     </rect>
-    <rect x="127.6" y="200" width="2" height="0" 
+    <rect x="126.4" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="110.4" 
+      <animate attributeName="height" from="0" to="9.6" 
         dur="0.6s" begin="0.025s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="89.6" 
+      <animate attributeName="y" from="200" to="190.4" 
         dur="0.6s" begin="0.025s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.025s" repeatCount="indefinite"/>
     </rect>
-    <rect x="141.1" y="200" width="2" height="0" 
+    <rect x="152.9" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="91.2" 
-        dur="0.6s" begin="0.03s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="108.8" 
-        dur="0.6s" begin="0.03s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.03s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="154.6" y="200" width="2" height="0" 
-          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="57.6" 
+      <animate attributeName="height" from="0" to="100.8" 
         dur="0.6s" begin="0.035s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="142.4" 
+      <animate attributeName="y" from="200" to="99.2" 
         dur="0.6s" begin="0.035s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.035s" repeatCount="indefinite"/>
     </rect>
-    <rect x="168.1" y="200" width="2" height="0" 
+    <rect x="166.2" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="115.2" 
+      <animate attributeName="height" from="0" to="91.2" 
         dur="0.6s" begin="0.04s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="84.8" 
+      <animate attributeName="y" from="200" to="108.8" 
         dur="0.6s" begin="0.04s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.04s" repeatCount="indefinite"/>
     </rect>
-    <rect x="181.7" y="200" width="2" height="0" 
+    <rect x="179.5" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="76.8" 
+      <animate attributeName="height" from="0" to="120.0" 
         dur="0.6s" begin="0.045s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="123.2" 
+      <animate attributeName="y" from="200" to="80.0" 
         dur="0.6s" begin="0.045s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.045s" repeatCount="indefinite"/>
     </rect>
-    <rect x="195.2" y="200" width="2" height="0" 
-          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="33.6" 
-        dur="0.6s" begin="0.05s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="166.4" 
-        dur="0.6s" begin="0.05s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.05s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="222.2" y="200" width="2" height="0" 
-          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="43.2" 
-        dur="0.6s" begin="0.06s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="156.8" 
-        dur="0.6s" begin="0.06s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.06s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="235.7" y="200" width="2" height="0" 
-          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="100.8" 
-        dur="0.6s" begin="0.065s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="99.2" 
-        dur="0.6s" begin="0.065s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.065s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="249.3" y="200" width="2" height="0" 
+    <rect x="245.8" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
       <animate attributeName="height" from="0" to="67.2" 
         dur="0.6s" begin="0.07s" fill="freeze"/>
@@ -401,52 +356,43 @@
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.07s" repeatCount="indefinite"/>
     </rect>
-    <rect x="262.8" y="200" width="2" height="0" 
+    <rect x="259.1" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="96.0" 
+      <animate attributeName="height" from="0" to="72.0" 
         dur="0.6s" begin="0.075s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="104.0" 
+      <animate attributeName="y" from="200" to="128.0" 
         dur="0.6s" begin="0.075s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.075s" repeatCount="indefinite"/>
     </rect>
-    <rect x="276.3" y="200" width="2" height="0" 
+    <rect x="272.4" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="115.2" 
+      <animate attributeName="height" from="0" to="91.2" 
         dur="0.6s" begin="0.08s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="84.8" 
+      <animate attributeName="y" from="200" to="108.8" 
         dur="0.6s" begin="0.08s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.08s" repeatCount="indefinite"/>
     </rect>
-    <rect x="289.8" y="200" width="2" height="0" 
+    <rect x="285.6" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="48.0" 
+      <animate attributeName="height" from="0" to="24.0" 
         dur="0.6s" begin="0.085s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="152.0" 
+      <animate attributeName="y" from="200" to="176.0" 
         dur="0.6s" begin="0.085s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.085s" repeatCount="indefinite"/>
     </rect>
-    <rect x="303.3" y="200" width="2" height="0" 
+    <rect x="312.2" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="120.0" 
-        dur="0.6s" begin="0.09s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="80.0" 
-        dur="0.6s" begin="0.09s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.09s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="316.9" y="200" width="2" height="0" 
-          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="105.6" 
+      <animate attributeName="height" from="0" to="33.6" 
         dur="0.6s" begin="0.095s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="94.4" 
+      <animate attributeName="y" from="200" to="166.4" 
         dur="0.6s" begin="0.095s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.095s" repeatCount="indefinite"/>
     </rect>
-    <rect x="330.4" y="200" width="2" height="0" 
+    <rect x="325.5" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
       <animate attributeName="height" from="0" to="86.4" 
         dur="0.6s" begin="0.1s" fill="freeze"/>
@@ -455,176 +401,203 @@
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.1s" repeatCount="indefinite"/>
     </rect>
-    <rect x="370.9" y="200" width="2" height="0" 
+    <rect x="352.0" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="105.6" 
+      <animate attributeName="height" from="0" to="4.8" 
+        dur="0.6s" begin="0.11s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="195.2" 
+        dur="0.6s" begin="0.11s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.11s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="365.3" y="200" width="2" height="0" 
+          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
+      <animate attributeName="height" from="0" to="24.0" 
         dur="0.6s" begin="0.115s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="94.4" 
+      <animate attributeName="y" from="200" to="176.0" 
         dur="0.6s" begin="0.115s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.115s" repeatCount="indefinite"/>
     </rect>
-    <rect x="384.4" y="200" width="2" height="0" 
+    <rect x="378.5" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="81.6" 
+      <animate attributeName="height" from="0" to="72.0" 
         dur="0.6s" begin="0.12s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="118.4" 
+      <animate attributeName="y" from="200" to="128.0" 
         dur="0.6s" begin="0.12s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.12s" repeatCount="indefinite"/>
     </rect>
-    <rect x="398.0" y="200" width="2" height="0" 
+    <rect x="391.8" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="120.0" 
+      <animate attributeName="height" from="0" to="105.6" 
         dur="0.6s" begin="0.125s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="80.0" 
+      <animate attributeName="y" from="200" to="94.4" 
         dur="0.6s" begin="0.125s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.125s" repeatCount="indefinite"/>
     </rect>
-    <rect x="438.5" y="200" width="2" height="0" 
+    <rect x="405.1" y="200" width="2" height="0" 
           fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="86.4" 
+      <animate attributeName="height" from="0" to="48.0" 
+        dur="0.6s" begin="0.13s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="152.0" 
+        dur="0.6s" begin="0.13s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.13s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="431.6" y="200" width="2" height="0" 
+          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
+      <animate attributeName="height" from="0" to="19.2" 
         dur="0.6s" begin="0.14s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="113.6" 
+      <animate attributeName="y" from="200" to="180.8" 
         dur="0.6s" begin="0.14s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.14s" repeatCount="indefinite"/>
     </rect>
-    <rect x="452.0" y="200" width="2" height="0" 
-          fill="#00d4ff" opacity="0.8" rx="1" filter="url(#bar-glow-0)">
-      <animate attributeName="height" from="0" to="72.0" 
-        dur="0.6s" begin="0.145s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="128.0" 
-        dur="0.6s" begin="0.145s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.145s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="465.6" y="200" width="2" height="0" 
+    <rect x="458.2" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="67.2" 
+      <animate attributeName="height" from="0" to="105.6" 
         dur="0.6s" begin="0.15s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="132.8" 
+      <animate attributeName="y" from="200" to="94.4" 
         dur="0.6s" begin="0.15s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.15s" repeatCount="indefinite"/>
     </rect>
-    <rect x="506.1" y="200" width="2" height="0" 
+    <rect x="484.7" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="52.8" 
+      <animate attributeName="height" from="0" to="28.8" 
+        dur="0.6s" begin="0.16s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="171.2" 
+        dur="0.6s" begin="0.16s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="498.0" y="200" width="2" height="0" 
+          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
+      <animate attributeName="height" from="0" to="105.6" 
         dur="0.6s" begin="0.165s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="147.2" 
+      <animate attributeName="y" from="200" to="94.4" 
         dur="0.6s" begin="0.165s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.165s" repeatCount="indefinite"/>
     </rect>
-    <rect x="533.1" y="200" width="2" height="0" 
+    <rect x="511.3" y="200" width="2" height="0" 
+          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
+      <animate attributeName="height" from="0" to="9.6" 
+        dur="0.6s" begin="0.17s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="190.4" 
+        dur="0.6s" begin="0.17s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.17s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="537.8" y="200" width="2" height="0" 
+          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
+      <animate attributeName="height" from="0" to="33.6" 
+        dur="0.6s" begin="0.18s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="166.4" 
+        dur="0.6s" begin="0.18s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.18s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="551.1" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
       <animate attributeName="height" from="0" to="91.2" 
-        dur="0.6s" begin="0.17500000000000002s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="108.8" 
-        dur="0.6s" begin="0.17500000000000002s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.17500000000000002s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="560.2" y="200" width="2" height="0" 
-          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="120.0" 
         dur="0.6s" begin="0.185s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="80.0" 
+      <animate attributeName="y" from="200" to="108.8" 
         dur="0.6s" begin="0.185s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.185s" repeatCount="indefinite"/>
     </rect>
-    <rect x="573.7" y="200" width="2" height="0" 
+    <rect x="564.4" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="81.6" 
+      <animate attributeName="height" from="0" to="91.2" 
         dur="0.6s" begin="0.19s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="118.4" 
+      <animate attributeName="y" from="200" to="108.8" 
         dur="0.6s" begin="0.19s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.19s" repeatCount="indefinite"/>
     </rect>
-    <rect x="587.2" y="200" width="2" height="0" 
+    <rect x="590.9" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="86.4" 
-        dur="0.6s" begin="0.195s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="113.6" 
-        dur="0.6s" begin="0.195s" fill="freeze"/>
+      <animate attributeName="height" from="0" to="72.0" 
+        dur="0.6s" begin="0.2s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="128.0" 
+        dur="0.6s" begin="0.2s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.195s" repeatCount="indefinite"/>
+        dur="2s" begin="0.2s" repeatCount="indefinite"/>
     </rect>
-    <rect x="627.8" y="200" width="2" height="0" 
+    <rect x="617.5" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="86.4" 
+      <animate attributeName="height" from="0" to="76.8" 
         dur="0.6s" begin="0.21s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="113.6" 
+      <animate attributeName="y" from="200" to="123.2" 
         dur="0.6s" begin="0.21s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.21s" repeatCount="indefinite"/>
     </rect>
-    <rect x="641.3" y="200" width="2" height="0" 
-          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="76.8" 
-        dur="0.6s" begin="0.215s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="123.2" 
-        dur="0.6s" begin="0.215s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.215s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="654.8" y="200" width="2" height="0" 
+    <rect x="683.8" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
       <animate attributeName="height" from="0" to="62.4" 
-        dur="0.6s" begin="0.22s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="137.6" 
-        dur="0.6s" begin="0.22s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.22s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="681.9" y="200" width="2" height="0" 
-          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="52.8" 
-        dur="0.6s" begin="0.23s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="147.2" 
-        dur="0.6s" begin="0.23s" fill="freeze"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.23s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="695.4" y="200" width="2" height="0" 
-          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="67.2" 
         dur="0.6s" begin="0.23500000000000001s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="132.8" 
+      <animate attributeName="y" from="200" to="137.6" 
         dur="0.6s" begin="0.23500000000000001s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.23500000000000001s" repeatCount="indefinite"/>
     </rect>
-    <rect x="722.4" y="200" width="2" height="0" 
+    <rect x="697.1" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="52.8" 
-        dur="0.6s" begin="0.245s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="147.2" 
-        dur="0.6s" begin="0.245s" fill="freeze"/>
+      <animate attributeName="height" from="0" to="19.2" 
+        dur="0.6s" begin="0.24s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="180.8" 
+        dur="0.6s" begin="0.24s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
-        dur="2s" begin="0.245s" repeatCount="indefinite"/>
+        dur="2s" begin="0.24s" repeatCount="indefinite"/>
     </rect>
-    <rect x="735.9" y="200" width="2" height="0" 
+    <rect x="723.6" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="4.8" 
+      <animate attributeName="height" from="0" to="57.6" 
         dur="0.6s" begin="0.25s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="195.2" 
+      <animate attributeName="y" from="200" to="142.4" 
         dur="0.6s" begin="0.25s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.25s" repeatCount="indefinite"/>
     </rect>
-    <rect x="749.4" y="200" width="2" height="0" 
+    <rect x="736.9" y="200" width="2" height="0" 
           fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
-      <animate attributeName="height" from="0" to="105.6" 
+      <animate attributeName="height" from="0" to="52.8" 
         dur="0.6s" begin="0.255s" fill="freeze"/>
-      <animate attributeName="y" from="200" to="94.4" 
+      <animate attributeName="y" from="200" to="147.2" 
         dur="0.6s" begin="0.255s" fill="freeze"/>
       <animate attributeName="opacity" values="0.6;1;0.6" 
         dur="2s" begin="0.255s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="750.2" y="200" width="2" height="0" 
+          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
+      <animate attributeName="height" from="0" to="38.4" 
+        dur="0.6s" begin="0.26s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="161.6" 
+        dur="0.6s" begin="0.26s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.26s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="763.5" y="200" width="2" height="0" 
+          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
+      <animate attributeName="height" from="0" to="19.2" 
+        dur="0.6s" begin="0.265s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="180.8" 
+        dur="0.6s" begin="0.265s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.265s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="776.7" y="200" width="2" height="0" 
+          fill="#a78bfa" opacity="0.8" rx="1" filter="url(#bar-glow-1)">
+      <animate attributeName="height" from="0" to="33.6" 
+        dur="0.6s" begin="0.27s" fill="freeze"/>
+      <animate attributeName="y" from="200" to="166.4" 
+        dur="0.6s" begin="0.27s" fill="freeze"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" 
+        dur="2s" begin="0.27s" repeatCount="indefinite"/>
     </rect>
 
   <!-- Stats display -->
@@ -633,7 +606,7 @@
       font-family="monospace" letter-spacing="1" text-anchor="start">TOTAL CONTRIBUTIONS</text>
     <text x="60" y="275" fill="#00d4ff" font-size="32" 
       font-weight="bold" font-family="sans-serif" text-anchor="start" opacity="0">
-      596
+      431
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.5s" fill="freeze"/>
     </text>
   </g>
@@ -642,7 +615,7 @@
       font-family="monospace" letter-spacing="1" text-anchor="start">CURRENT STREAK</text>
     <text x="300" y="275" fill="#a78bfa" font-size="32" 
       font-weight="bold" font-family="sans-serif" text-anchor="start" opacity="0">
-      0
+      5
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.7s" fill="freeze"/>
     </text>
     <text x="320" y="275" fill="#94a3b8" font-size="16" 
