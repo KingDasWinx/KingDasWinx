@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-10T11:25:57+00:00",
+  "updated_at": "2026-09-11T11:27:50+00:00",
   "total": 1489,
-  "current_streak": 1,
+  "current_streak": 0,
   "longest_streak": 19,
   "best_day": {
     "date": "2026-08-14",
@@ -1851,6 +1851,11 @@
     },
     {
       "date": "2026-09-10",
+      "level": 0,
+      "count": 0
+    },
+    {
+      "date": "2026-09-11",
       "level": 0,
       "count": 0
     }
