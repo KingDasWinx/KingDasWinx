@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T15:56:27+00:00",
+  "updated_at": "2026-11-17T16:07:54+00:00",
   "total": 3606,
   "current_streak": 0,
   "longest_streak": 23,
@@ -1836,6 +1836,11 @@
     },
     {
       "date": "2026-11-16",
+      "level": 0,
+      "count": 0
+    },
+    {
+      "date": "2026-11-17",
       "level": 0,
       "count": 0
     }
